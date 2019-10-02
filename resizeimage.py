@@ -1,13 +1,14 @@
 from PIL import Image
 
-def make_square(im, min_size=256, fill_color=(0, 0, 0, 0)):
+def makeSquare(im, minSize = 256, fillColor = (0, 0, 0, 0)):
     x, y = im.size
-    size = max(min_size, x, y)
-    new_im = Image.new('RGBA', (size, size), fill_color)
-    new_im.paste(im, ((size - x) / 2, (size - y) / 2))
-    return new_im
+    size = max(minSize, x, y)
+    newImage = Image.new('RGBA', (size, size), fillColor)
+    formatImage = ((size - x) / 2, (size - y) / 2)
+    newImage.paste(im, formatImage)
+    return newImage
 
 #Test Code:
-test_image = Image.open(test.jpg)
-new_image = make_square(test_image)
-new_image.show()
+testImage = Image.open(test.jpg)
+newImage = makeSquare(testImage)
+newImage.show()
