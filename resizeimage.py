@@ -10,5 +10,5 @@ def makeSquare(im, minSize = 256, fillColor = (0, 0, 0, 0)):
 
 #Test Code:
 testImage = Image.open(test.jpg)
-newImageage = makeSquare(testImage)
-newImageage.show()
+newImage = makeSquare(testImage)
+newImage.show()
